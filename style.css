@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Phudu:wght@300&display=swap');
+body{
+    background-color: rgb(5, 34, 71);
+}
+
+header{
+    --padding:0.5rem;
+    --border-radius:0.5rem;
+    --border:0.3rem solid rgb(219, 139, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "mooli";
+    padding: 2rem;
+    background-color: rgb(219, 139, 0);
+    color: rgb(0, 0, 0);
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 700;
+}
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+li{
+   
+    text-decoration: none;
+    text-decoration-style: none;
+}
+.nav:hover{
+    border-bottom: 0.2rem solid rgb(253, 4, 4);
+}
+#search{
+    border: var(--border);
+   padding: var(--padding);
+    border-radius: var(--border-radius);
+}
+#search:focus{
+        border:0.3rem groove rgb(55, 208, 9)
+}
+.search-btn{
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--padding)
+}
+.search-btn:hover{
+       background-color: rgb(224, 6, 180);
+}
+.add-book{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: var(--padding);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+.add-book:hover{
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+    }
