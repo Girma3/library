@@ -6,21 +6,60 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </head>
 <body>
   <header>
     <div class="logo">Mini-Library</div>
     <div>
-        <label for="search"></label>
-        <input type="text" placeholder="search books">
+       
+        <input type="text" id="search" placeholder="search books">
+        <button class="search-btn"> <iconify-icon icon="material-symbols:search"></iconify-icon> </button>
     </div>
     <div>
         <ul>
-            <li>Home</li>
-            <li>Explore</li>
-            <li><button>+Add new book</button></li>
+            <li class="nav">Home</li>
+            <li class="nav">Explore</li>
+            <li><button class="add-book">+Add new book</button></li>
         </ul>
+        
     </div>
   </header>
+  <main>
+    <div class="modal">
+         <dialog id="book-info"> 
+
+          <form action="method" >
+
+            <label for="book-title">Book Name</label>
+            <input type="text" id="book-title" name="book-name">
+
+             <label for="author">Author</label>
+            <input type="text" id="author" name="book-author" > 
+
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" name="book-page"> 
+
+            <span>Did you Read  it ? </span>
+                <div class="checkbox">
+                    <div>
+                    <span>
+                        <label for="read-it" >yes:</label>
+                        <input type="checkbox" id="read-it" name="book-read" value="yes" >
+                    </span>
+                </div>
+            <div>
+                <span>
+                    <label for="not-read">No:</label>
+                    <input type="checkbox" id="not-read" name="book-not-read" value="no">
+                </span>
+            </div>  
+          </form>
+
+        </dialog>
+
+    </div>
+  </main>
+ 
 </body>
 </html>
