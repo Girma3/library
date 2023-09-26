@@ -13,20 +13,24 @@ Book.prototype.toggleRead = function(book){
   }
 
 //put user book as object in the array
+let mybook = new Book('Crime and Punishment','Fyodor Dostoevsky','671',true)
 let myLibrary = [];
 //function to add user book to the array
  
  function addBookToLibrary(array){
- //form values  
- const userBookTitle = document.getElementById('book-title').value;
- const userBookAuthor = document.getElementById('author').value;
- const userBookPages = document.getElementById('pages').value;
- const userReadStatus = document.getElementById('read-it').checked;
-
- 
-  
-   let userBook = new Book(userBookTitle,userBookAuthor,userBookPages,userReadStatus);
-    array.push(userBook)
+      //form values  
+      const userBookTitle = document.getElementById('book-title').value;
+      const userBookAuthor = document.getElementById('author').value;
+      const userBookPages = document.getElementById('pages').value;
+      const userReadStatus = document.getElementById('read-it').checked;
+      //to show default ecample and pervent creating empty object
+      if(userBookTitle == '' || userBookAuthor == ''|| userBookPages == ''){
+        array.push(mybook)
+      }
+      else{
+        let userBook = new Book(userBookTitle,userBookAuthor,userBookPages,userReadStatus);
+          array.push(userBook)
+      }
  }
  
  //function that accept array of books object and  create card for each book in the array
@@ -66,7 +70,7 @@ let myLibrary = [];
     bookTitle.textContent = book.title;
     bookAuthor.textContent = "by " + book.author;
     bookPage.textContent = "pages: " + book.pages;
-    bookStatus.textContent = book.readStatus ? "Completed" : 'Not read it yet.'
+    bookStatus.textContent = book.readStatus ? "Book status: Completed" : 'Book status: Not read it yet.'
     deleteBtn.textContent = "Remove";
     read.textContent = "change status";
 
@@ -84,7 +88,7 @@ let myLibrary = [];
               let changeStatus = myarray[itemIndex];
             
               changeStatus.toggleRead()
-              //call dispmay fuc=nction to shaow change in bookstatus on card
+              //call display function to shaow change in bookstatus on the card
               displayBook(myLibrary)
               
             }
@@ -98,10 +102,11 @@ let myLibrary = [];
  //function to display the books on screen
 function displayBook(myarray){
      const books = document.querySelector('.books');
-     // clear the books to avoid new one writing thr old
+
+     // clear the books to avoid new one writing the old one's
       books.innerHTML = "";
       bookCards(myarray);
-     
+      console.log(myLibrary)
   }
 
 //button to  show modal
@@ -121,6 +126,7 @@ submit.addEventListener('click',function(event){
     let userReadStatus = document.getElementById('read-it').checked;
     const msg = document.querySelector('.validate-msg')
     const msgFill = document.querySelector('.msg-invalid');
+    
     //functiion to vallidate
     function validateForm(){
         if(userReadStatus == false && userNotRead == false ){
@@ -161,3 +167,7 @@ submit.addEventListener('click',function(event){
    
     
 });
+
+
+addBookToLibrary(myLibrary)
+displayBook(myLibrary);
