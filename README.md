@@ -14,8 +14,8 @@ I learned about object constructor and using method using prototype to organize 
  -https://javascript.info/prototype-inheritance
 
  # screenshot
- [!images](/image/form.jpg)
- [!images](/image/book-card.jpg)
+ [!form](/image/form.jpg)
+ [!book-card](/image/book-card.jpg)
 
  -live preview
  https://girma3.github.io/library/
