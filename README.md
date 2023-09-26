@@ -10,10 +10,10 @@ I learned about object constructor and using method using prototype to organize 
 
 # helpfull materials
  - principle of object oriented javascript programming by Nicholas c.Zakas
- -https://javascript.info/prototype-inheritance
+   https://javascript.info/prototype-inheritance
 
  # screenshot
- [!images](/image/form.jpg)
- [!images](/image/book-card.jpg)
+ [!images](image/form.jpg)
+ [!images](image/book-card.jpg)
 
  -live preview
