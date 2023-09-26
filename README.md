@@ -1,5 +1,6 @@
 # ibrary project
-    This project was for the odin library project that let user to add books they want after filling the form after click the Addd new button.
+    This project was for the odin library project that let user to add books they want after
+    filling the form after click the 'Add new book' button.
 
     *for this project I used
         -HTMl
@@ -10,10 +11,11 @@ I learned about object constructor and using method using prototype to organize 
 
 # helpfull materials
  - principle of object oriented javascript programming by Nicholas c.Zakas
-   https://javascript.info/prototype-inheritance
+ -https://javascript.info/prototype-inheritance
 
  # screenshot
- [!images](image/form.jpg)
- [!images](image/book-card.jpg)
+ [!images](/image/form.jpg)
+ [!images](/image/book-card.jpg)
 
  -live preview
+ https://girma3.github.io/library/
