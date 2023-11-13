@@ -43,12 +43,12 @@ li{
 .nav:hover{
     border-bottom: 0.2rem solid rgb(253, 4, 4);
 }
-#search{
+.search{
     border: var(--border);
     padding: var(--padding);
     border-radius: var(--border-radius);
 }
-#search:focus{
+.search:focus{
         border:0.3rem groove rgb(55, 208, 9)
 }
 .search-btn{
