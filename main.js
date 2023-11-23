@@ -11,12 +11,6 @@ class Book{
   }
 }
 
-//add toggle function as prototype for efficiency
-Book.prototype.toggleRead = function(book){
-    //interchange value
-    this.readStatus = !this.readStatus
-  }
-
 //put user book as object in the array
 let mybook = new Book('Crime and Punishment','Fyodor Dostoevsky','671',true)
 let myLibrary = [];
