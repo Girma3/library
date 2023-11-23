@@ -1,9 +1,14 @@
-//constructor for the book
-function Book(title,author,pages,readStatus){
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.readStatus = readStatus
+//class created with method
+class Book{
+  constructor(title,author,pages,readStatus){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.readStatus = readStatus;
+  }
+  toggleRead(book){
+    this.readStatus = !this.readStatus
+  }
 }
 
 //add toggle function as prototype for efficiency
